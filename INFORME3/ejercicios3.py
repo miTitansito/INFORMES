@@ -1,5 +1,8 @@
 nombre_completo = ""   #Por favor ingrese su nombre COMPLETO en la cadena
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
 # ----------------------------Ejercicios INFORME 3--------------------------------
 """
 Recomendaciones:
@@ -66,7 +69,7 @@ Recomendaciones:
        reporteEstudiantes = [promediosEstudiantes, promediosExamenes, mejorEstudiante, peorEstudiante]
 """
 archivo = "estudiantes.csv"
-ruta = "C:/Users/japin/Downloads/" + archivo
+ruta = "C:/Users/CABRERA/Documents/GitHub/INFORMES/INFORME3/" + archivo
 hojaEstudiantes = pd.read_csv(ruta, index_col="codigo", dtype={"codigo":str})
 promediosEstudiantes=hojaEstudiantes.mean(axis=1)
 promediosExamenes=hojaEstudiantes.mean(axis=0)

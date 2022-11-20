@@ -5,7 +5,8 @@ import octal
 print('---------Conversor Numerico-------')
 print("   ")
 print("""Recuerde que debe ingresar el numero a convertir correctamente, en su forma correcta\n 
-Las opciones a ingresar correspone a la base de los numeros a trabajar""")
+Las opciones a ingresar correspone a la base de los numeros a trabajar\n
+No se acpetan numeros negativos""")
 print("   ")
 
 
@@ -60,4 +61,32 @@ elif numconver=="8":
     if num3=="2":
         print(octal.convertirABinario(cadena_octal))
 
+elif numconver=="10":
+    cadena_decimal=input('Ingrese su numero decimal')
+    num4=input( """
+"Escriba el numero de la opcion al que desea convertir su numero
+2)Binario
+8)Octal
+16)Hexadecimal
+""")
+    if num4=="8":
+        print(decimal.convertirAOctal(cadena_decimal))
+    if num4=="16":
+        print(decimal.convertirAHexadecimal(cadena_decimal))
+    if num4=="2":
+        print(decimal.convertirABinario(cadena_decimal))
 
+elif numconver=="16":
+    cadena_hexadecimal=input('Ingrese su numero decimal')
+    num4=input( """
+"Escriba el numero de la opcion al que desea convertir su numero
+2)Binario
+8)Octal
+10)Decimal
+""")
+    if num4=="8":
+        print(hexadecimal.convertirAOctal(cadena_hexadecimal))
+    if num4=="10":
+        print(hexadecimal.convertirADecimal(cadena_hexadecimal))
+    if num4=="2":
+        print(hexadecimal.convertirABinario(cadena_hexadecimal))

@@ -35,4 +35,5 @@ def convertirAHexadecimal(cadena_decimal):
     hex = cadena_decimal%16
     return  str(convertirAHexadecimal(cadena_decimal//16)+letras[hex])
         
-print(convertirAHexadecimal('89798568985268'))
+# print(convertirAHexadecimal('89798568985268'))
+print(convertirAOctal())

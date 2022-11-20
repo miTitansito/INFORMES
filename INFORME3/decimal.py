@@ -3,6 +3,7 @@
             convertirAOctal       => recibe string (cadena_decimal), retorna string (cadena_octal)
             convertirAHexadecimal => recibe string (cadena_decimal), retorna string (cadena_hexadecimal)"""
 def convertirABinario(cadena_decimal):
+    cadena_decimal=int(cadena_decimal)
     bin=0
     cont=1
     while cadena_decimal!=0:
@@ -12,6 +13,7 @@ def convertirABinario(cadena_decimal):
     return str(bin)
 
 def convertirAOctal(cadena_decimal):
+    cadena_decimal=int(cadena_decimal)
     octal=0
     cont=1
     while cadena_decimal!=0:
@@ -27,8 +29,10 @@ def convertirAOctal(cadena_decimal):
 letras = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A' , 'B', 'C', 'D', 'E', 'F']
 
 def convertirAHexadecimal(cadena_decimal):
+    cadena_decimal=int(cadena_decimal)
     if(cadena_decimal<=0):
         return ''
     hex = cadena_decimal%16
-    return  convertirAHexadecimal(cadena_decimal//16)+letras[hex]
+    return  str(convertirAHexadecimal(cadena_decimal//16)+letras[hex])
         
+print(convertirAHexadecimal('78'))

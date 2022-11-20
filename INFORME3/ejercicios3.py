@@ -152,3 +152,33 @@ reporteVentas = [ventasPorProducto, estadisticas, extremos]
        |     plt.legend()
        |     plt.show()
 """
+x = np.arange(0, 6.28, 0.01)
+columna1 = np.sin(x) +  0.000008*np.random.rand(628)
+data = np.hstack(columna1.reshape(628,1))
+hoja1 = pd.DataFrame(data= data,
+                     index= x,
+                     columns= ["f1"])
+
+derivada1 = np.diff(columna1)/np.diff(x)  
+derivada2=np.diff(derivada1)/np.diff(x[1:])
+
+def graficaGenerica(x, y):
+    plt.figure(figsize=(10,5))
+    plt.subplot(1,3,1)
+    titulo="sen(x)        f'(sen(x))          f''(sen(x))"
+    y_prima = derivada1
+    y_primados=derivada2
+    plt.title(titulo)
+    plt.plot(x,y, "b", label="funcion f(x)") #y vs x
+    plt.subplot(1,3,2)
+    plt.plot(x[:-1], y_prima, "r", label="derivada f '(x)") #y' vs x'
+    plt.subplot(1,3,3)
+    plt.plot(x[1:-1],y_primados, "g",label="derivada f''(x)") #y'' vs x''
+    plt.xlabel("x")
+    plt.legend()  
+    plt.show()
+
+x = hoja1.index
+y = hoja1["f1"]
+
+graficaGenerica(x, y)

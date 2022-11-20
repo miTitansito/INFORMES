@@ -36,11 +36,8 @@ def convertirABinario(cadena_octal):
 letras = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A' , 'B', 'C', 'D', 'E', 'F']
 
 def convertirAHexadecimal(cadena_octal):
-    cadena_octal=int(cadena_octal)
-    decc=int(convertirADecimal(cadena_octal))
-    print(decc)
-    if(decc<=0):
-        return ''
-    hex = decc%16
-    return  str(convertirAHexadecimal(decc//16)+letras[hex])
-print(convertirAHexadecimal(1144))
+    decimal = int(cadena_octal, 8)
+    oct = int(decimal)
+    hex = format(oct,'0x')
+    return hex
+print(convertirAHexadecimal("1144"))

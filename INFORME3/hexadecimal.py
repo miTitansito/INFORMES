@@ -1,12 +1,4 @@
-def convertirADecimal(cadena_octal):
-    cadena_octal=int(cadena_octal)
-    decimal = 0
-    cont = 1
-    while (cadena_octal):
-        a = cadena_octal % 10
-        cadena_octal = int(cadena_octal / 10)
-        decimal += a * cont
-        cont*=8
-    return str(decimal)
-
-print(convertirADecimal("64"))
+"""El modulo Hexadecimal debe tener las siguientes funciones:
+            convertirABinario => recibe string (cadena_hexadecimal), retorna string (cadena_binario)
+            convertirADecimal => recibe string (cadena_hexadecimal), retorna string (cadena_decimal)
+            convertirAOctal   => recibe string (cadena_hexadecimal), retorna string (cadena_Octal)"""

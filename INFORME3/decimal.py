@@ -4,25 +4,25 @@
             convertirAHexadecimal => recibe string (cadena_decimal), retorna string (cadena_hexadecimal)"""
 def convertirABinario(cadena_decimal):
     cadena_decimal=int(cadena_decimal)
-    bin=0
+    cadena_binario=0
     cont=1
     while cadena_decimal!=0:
-        bin=bin+cadena_decimal%2*cont
+        cadena_binario=cadena_binario+cadena_decimal%2*cont
         cadena_decimal//=2
         cont*=10
-    return str(bin)
+    return str(cadena_binario)
 
 def convertirAOctal(cadena_decimal):
     cadena_decimal=int(cadena_decimal)
-    octal=0
+    cadena_octal=0
     cont=1
     while cadena_decimal!=0:
-        octal+=(cadena_decimal%8)*cont
+        cadena_octal+=(cadena_decimal%8)*cont
         cont*=10
         cadena_decimal//=8
 
         
-    return(str(octal))
+    return(str(cadena_octal))
 
 
 
@@ -33,6 +33,7 @@ def convertirAHexadecimal(cadena_decimal):
     if(cadena_decimal<=0):
         return ''
     hex = cadena_decimal%16
-    return  str(convertirAHexadecimal(cadena_decimal//16)+letras[hex])
+    cadena_hexadecimal=convertirAHexadecimal(cadena_decimal//16)+letras[hex]
+    return  str(cadena_hexadecimal)
         
-# print(convertirAHexadecimal('89798568985268'))
+print(convertirAHexadecimal('89798568985268'))

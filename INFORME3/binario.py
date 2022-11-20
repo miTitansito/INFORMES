@@ -27,7 +27,6 @@ def convertirAOctal(cadena_binario):
     cadena_octal=0
     cont=1
     dec=int(convertirADecimal(cadena_binario))
-    print(type(dec))
     while dec!=0:
         cadena_octal+=(dec%8)*cont
         cont*=10

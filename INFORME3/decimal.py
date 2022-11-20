@@ -22,22 +22,13 @@ def convertirAOctal(cadena_decimal):
         
     return(str(octal))
 
-def hexadecimal(resul):
-    alfabetico={10:"a",11:"b",12:"c",13:"d",14:"e",15:"f"}
-    if resul in alfabetico:
-        return alfabetico[resul]
-    else:
-        return resul
-def convertirAHexadecimal(cadena_decimal):
-    hex=0
-    cont=1
-    while cadena_decimal!=0:
-        hex+=(cadena_decimal%16)*cont
-        letra=hexadecimal(hex)
-        cont*=10
-        cadena_decimal//=16
-    return str(hex)
-print(convertirAHexadecimal(678))
-print(convertirAOctal(33))
 
-print(type(convertirABinario(645)))
+
+letras = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A' , 'B', 'C', 'D', 'E', 'F']
+
+def convertirAHexadecimal(cadena_decimal):
+    if(cadena_decimal<=0):
+        return ''
+    hex = cadena_decimal%16
+    return  convertirAHexadecimal(cadena_decimal//16)+letras[hex]
+        

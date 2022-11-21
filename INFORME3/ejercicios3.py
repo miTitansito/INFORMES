@@ -1,4 +1,4 @@
-nombre_completo = ""   #Por favor ingrese su nombre COMPLETO en la cadena
+nombre_completo = "Brigida Janeth Pinzon Solano"   #Por favor ingrese su nombre COMPLETO en la cadena
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
